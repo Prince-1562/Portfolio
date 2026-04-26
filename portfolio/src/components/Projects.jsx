@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { FaGithub, FaExternalLinkAlt, FaShieldAlt, FaBuilding, FaImage, FaIdCard } from 'react-icons/fa'
+import { FaGithub, FaExternalLinkAlt, FaBuilding, FaImage, FaIdCard } from 'react-icons/fa'
 import { GITHUB_URL } from '../constants'
 
 const projects = [
@@ -91,7 +91,7 @@ const Projects = () => {
                 {/* Hover Overlay */}
                 <div className="absolute inset-0 bg-primary-bg/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
                 <motion.a
-                    href={GITHUB_URL}
+                    href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="View source code on GitHub"
@@ -139,7 +139,7 @@ const Projects = () => {
                 {/* Links */}
                 <div className="flex items-center gap-4 mt-4 pt-4 border-t border-white/5">
                   <a
-                    href={GITHUB_URL}
+                    href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-sm text-text-secondary hover:text-accent-cyan transition-colors"
